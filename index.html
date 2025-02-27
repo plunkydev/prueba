@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const suma = (a, b) => a + b;
+        const resta = (a, b) => a - b;
+        const multiplicacion = (a, b) => a * b;
+        const division = (a, b) => a / b;
+
+        const calcular = (a, b, operacion) => operacion(a, b);
+        
+        const resultado = () => {
+            const sum = calcular(0, 5, suma);
+            const multi = calcular(sum, sum, multiplicacion);
+            const divi = calcular(multi, 2, division);
+            const rest = calcular(divi, 2.5, resta);
+            return rest;
+        }
+
+        console.log(resultado());
+    </script>
+</body>
+
+</html>
